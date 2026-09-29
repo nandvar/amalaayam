@@ -47,12 +47,15 @@ img {
     position: fixed;
     inset: 0;
     z-index: 1000;
-    background: var(--white);
+    background: #0a0a0a;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
+    transition: background 0.6s ease, opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.splash.fade-white {
+    background: var(--white);
 }
 
 .splash.hidden {
@@ -61,43 +64,44 @@ img {
     pointer-events: none;
 }
 
-.splash-logo {
-    width: 100px;
-    height: 100px;
-    border: 2px solid var(--light-grey);
-    border-radius: 50%;
+.splash-word {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: splash-pulse 1.8s ease-in-out infinite;
+    align-items: baseline;
+    white-space: nowrap;
 }
 
-.splash-devanagari {
+.splash-char {
     font-family: var(--font-deva);
-    font-size: 48px;
+    font-size: 120px;
     font-weight: 600;
-    color: var(--text-dark);
-    line-height: 1;
+    color: #fff;
+    line-height: 1.15;
+    display: inline-block;
+    padding-left: 14px;
+    transition: font-size 0.5s ease, color 0.5s ease;
+    user-select: none;
 }
 
-.splash-name {
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 6px;
-    text-transform: lowercase;
-    color: var(--text-light);
+.splash-char.settled {
+    font-size: 80px;
+}
+
+.splash-rest {
+    font-family: var(--font-deva);
+    font-size: 80px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.15;
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
     opacity: 0;
-    animation: splash-fade-in 0.8s ease forwards 0.4s;
+    transition: max-width 0.6s ease, opacity 0.5s ease, color 0.5s ease;
 }
 
-@keyframes splash-pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.7; }
-}
-
-@keyframes splash-fade-in {
-    to { opacity: 1; }
+.splash-rest.visible {
+    max-width: 400px;
+    opacity: 1;
 }
 
 /* === Navigation === */
@@ -136,10 +140,10 @@ img {
 }
 
 .nav-brand {
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    color: var(--text);
+    font-family: var(--font-deva);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
 .nav-links {
@@ -325,6 +329,38 @@ img {
     color: var(--text-light);
     max-width: 520px;
     line-height: 1.7;
+}
+
+/* === Name Meaning === */
+.section-meaning {
+    padding: 80px 40px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.meaning-devanagari {
+    font-family: var(--font-deva);
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.meaning-english {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.meaning-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.9;
+    max-width: 520px;
+    margin: 0 auto;
 }
 
 /* === About === */
@@ -556,10 +592,10 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: var(--text);
+    font-family: var(--font-deva);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
 .footer-devanagari {
@@ -584,6 +620,19 @@ img {
 
 /* === Responsive === */
 @media (max-width: 768px) {
+    .splash-char {
+        font-size: 80px;
+    }
+
+    .splash-char.settled {
+        font-size: 48px;
+    }
+
+    .splash-rest {
+        font-size: 48px;
+        max-width: 280px;
+    }
+
     .nav {
         padding: 16px 24px;
     }
@@ -644,6 +693,19 @@ img {
 }
 
 @media (max-width: 480px) {
+    .splash-char {
+        font-size: 64px;
+    }
+
+    .splash-char.settled {
+        font-size: 36px;
+    }
+
+    .splash-rest {
+        font-size: 36px;
+        max-width: 220px;
+    }
+
     .gallery-placeholder {
         grid-template-columns: 1fr;
     }

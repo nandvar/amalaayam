@@ -1,8 +1,36 @@
-// Splash screen
+// Splash screen — character cycle, land on अ, then reveal full name
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('splash').classList.add('hidden');
-    }, 2000);
+    const splash = document.getElementById('splash');
+    const charEl = document.getElementById('splash-char');
+    const restEl = document.getElementById('splash-rest');
+
+    const chars = ['क', 'श', 'म', 'प', 'स', 'भ', 'ह', 'अ'];
+    let i = 0;
+    let delay = 25;
+
+    function cycle() {
+        charEl.textContent = chars[i % chars.length];
+        i++;
+
+        if (chars[(i - 1) % chars.length] === 'अ' && delay > 65) {
+            setTimeout(() => {
+                charEl.classList.add('settled');
+                restEl.classList.add('visible');
+            }, 200);
+            setTimeout(() => {
+                splash.classList.add('fade-white');
+                charEl.style.color = '#0a0a0a';
+                restEl.style.color = '#0a0a0a';
+            }, 1000);
+            setTimeout(() => splash.classList.add('hidden'), 1500);
+            return;
+        }
+
+        if (i > 3) delay += 10;
+        setTimeout(cycle, delay);
+    }
+
+    setTimeout(cycle, 100);
 });
 
 // Nav scroll effect
