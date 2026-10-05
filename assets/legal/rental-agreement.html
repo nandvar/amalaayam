@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave and License Agreement — Amalaayam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #4a4a4a;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            font-size: 10.5pt;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 0;
+            background: #fff;
+            position: relative;
+        }
+
+        .page + .page {
+            page-break-before: always;
+        }
+
+        /* --- Header --- */
+        .header {
+            padding: 32px 44px 24px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-mark {
+            font-family: 'Noto Sans Devanagari', serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: #2a2a2a;
+            line-height: 1;
+        }
+
+        .header-divider {
+            width: 1px;
+            height: 38px;
+            background: #e8e8e8;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .header-devanagari {
+            font-family: 'Noto Sans Devanagari', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #2a2a2a;
+            line-height: 1.2;
+        }
+
+        .header-english {
+            font-size: 9px;
+            font-weight: 300;
+            color: #999;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 9px;
+            font-weight: 300;
+            color: #888;
+            line-height: 1.8;
+        }
+
+        .header-right a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .accent-stripe {
+            height: 2px;
+            background: linear-gradient(to right, #2a2a2a 0%, #2a2a2a 30%, transparent 100%);
+        }
+
+        /* --- Document Body --- */
+        .body {
+            padding: 36px 44px 80px;
+        }
+
+        .doc-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2a2a2a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .doc-subtitle {
+            text-align: center;
+            font-size: 11px;
+            font-weight: 300;
+            color: #888;
+            letter-spacing: 1px;
+            margin-bottom: 32px;
+        }
+
+        .preamble {
+            margin-bottom: 24px;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 12px;
+            font-weight: 500;
+            color: #2a2a2a;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin: 28px 0 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        h3 {
+            font-size: 11px;
+            font-weight: 500;
+            color: #4a4a4a;
+            margin: 16px 0 6px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        .clause {
+            margin-bottom: 6px;
+            padding-left: 20px;
+            text-indent: -20px;
+        }
+
+        .clause-num {
+            font-weight: 500;
+            color: #2a2a2a;
+            margin-right: 6px;
+        }
+
+        .sub-clause {
+            margin-bottom: 4px;
+            padding-left: 40px;
+            text-indent: -16px;
+        }
+
+        .sub-clause-marker {
+            font-weight: 400;
+            color: #888;
+            margin-right: 4px;
+        }
+
+        .placeholder {
+            color: #c44;
+            font-weight: 400;
+            background: #fff5f5;
+            padding: 0 3px;
+            border-radius: 2px;
+        }
+
+        .sig-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 48px;
+            page-break-inside: avoid;
+        }
+
+        .sig-party h4 {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 48px;
+        }
+
+        .sig-line {
+            border-top: 1px solid #ccc;
+            padding-top: 6px;
+            margin-bottom: 12px;
+        }
+
+        .sig-label {
+            font-size: 9px;
+            font-weight: 300;
+            color: #999;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .sig-value {
+            font-size: 10px;
+            color: #4a4a4a;
+        }
+
+        .witness-block {
+            margin-top: 40px;
+            page-break-inside: avoid;
+        }
+
+        .witness-block h4 {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 24px;
+        }
+
+        .witness-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 16px;
+        }
+
+        .witness-entry .sig-line {
+            margin-top: 32px;
+        }
+
+        table.details {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 10pt;
+        }
+
+        table.details td {
+            padding: 6px 10px;
+            vertical-align: top;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        table.details td:first-child {
+            width: 180px;
+            font-weight: 400;
+            color: #2a2a2a;
+        }
+
+        .inventory-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 9.5pt;
+        }
+
+        .inventory-table th {
+            text-align: left;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #888;
+            padding: 6px 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .inventory-table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 44px;
+            border-top: 1px solid #e8e8e8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-brand {
+            font-family: 'Noto Sans Devanagari', serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+
+        .footer-info {
+            font-size: 8px;
+            font-weight: 300;
+            color: #bbb;
+            letter-spacing: 0.5px;
+            text-align: right;
+            line-height: 1.6;
+        }
+
+        .page-num {
+            font-size: 8px;
+            color: #ccc;
+            text-align: center;
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media print {
+            body { background: #fff; }
+            .page { margin: 0; box-shadow: none; }
+        }
+
+        @media screen {
+            body { background: #f0f0f0; padding: 24px; }
+            .page { box-shadow: 0 1px 6px rgba(0,0,0,0.08); margin-bottom: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== PAGE 1 ==================== -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <span class="header-mark">अ</span>
+                <div class="header-divider"></div>
+                <div class="header-text">
+                    <span class="header-devanagari">अमलायम्</span>
+                    <span class="header-english">Amalaayam</span>
+                </div>
+            </div>
+            <div class="header-right">
+                B-3, Cloud Nine Cottages<br>
+                Jail Road, Dhumaspur, Badshahpur<br>
+                Gurgaon, Haryana 122101, India<br>
+                <a href="https://amalaayam.com">amalaayam.com</a> &middot; <span class="placeholder">[PHONE]</span>
+            </div>
+        </div>
+        <div class="accent-stripe"></div>
+
+        <div class="body">
+            <div class="doc-title">Leave and License Agreement</div>
+            <div class="doc-subtitle">Short-Term Holiday Accommodation</div>
+
+            <p class="preamble">
+                This <strong>Leave and License Agreement</strong> ("Agreement") is executed on
+                <span class="placeholder">[DATE]</span> at Gurgaon, Haryana, India, between the parties described below.
+                This agreement is governed by the Indian Easements Act, 1882 (Section 52) and does not create any
+                tenancy or lease in favour of the Licensee. The Licensee acknowledges that no right of tenancy under the
+                Haryana Urban (Control of Rent and Eviction) Act, 1973 or any other rent control legislation applies to
+                this arrangement.
+            </p>
+
+            <h2>1. Parties</h2>
+
+            <table class="details">
+                <tr>
+                    <td>Licensor (Owner)</td>
+                    <td><span class="placeholder">[OWNER FULL NAME]</span>, S/o / D/o / W/o <span class="placeholder">[PARENT/SPOUSE NAME]</span>, residing at <span class="placeholder">[OWNER ADDRESS]</span></td>
+                </tr>
+                <tr>
+                    <td>Aadhaar / PAN</td>
+                    <td><span class="placeholder">[OWNER ID NUMBER]</span></td>
+                </tr>
+                <tr>
+                    <td>Licensee (Guest)</td>
+                    <td><span class="placeholder">[GUEST FULL NAME]</span>, S/o / D/o / W/o <span class="placeholder">[PARENT/SPOUSE NAME]</span>, residing at <span class="placeholder">[GUEST PERMANENT ADDRESS]</span></td>
+                </tr>
+                <tr>
+                    <td>Aadhaar / Passport</td>
+                    <td><span class="placeholder">[GUEST ID NUMBER]</span></td>
+                </tr>
+            </table>
+
+            <p>Hereinafter the Licensor is referred to as the <strong>"Owner"</strong> and the Licensee as the <strong>"Guest."</strong></p>
+
+            <h2>2. Property Description</h2>
+
+            <table class="details">
+                <tr>
+                    <td>Property Name</td>
+                    <td>Amalaayam (अमलायम्)</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>B-3, Cloud Nine Cottages, Jail Road, Dhumaspur, Badshahpur, Gurgaon, Haryana 122101</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>Independent villa (main house + outhouse) with private pool, jacuzzi, garden, and parking on a half-acre estate</td>
+                </tr>
+                <tr>
+                    <td>Bedrooms</td>
+                    <td>6 bedrooms (4 in main house, 2 in outhouse), 6 attached bathrooms, 1 powder room, 2 pool bathrooms</td>
+                </tr>
+                <tr>
+                    <td>Common Areas</td>
+                    <td>2 living/seating areas, 1 dining room, 3 patios, outdoor dry kitchen</td>
+                </tr>
+                <tr>
+                    <td>Total Area (approx.)</td>
+                    <td>Half acre (plot)</td>
+                </tr>
+                <tr>
+                    <td>Furnishing Status</td>
+                    <td>Fully furnished (as per inventory in Annexure A)</td>
+                </tr>
+            </table>
+
+            <h2>3. Term of License</h2>
+
+            <table class="details">
+                <tr>
+                    <td>Check-in Date &amp; Time</td>
+                    <td><span class="placeholder">[DATE]</span> at <span class="placeholder">[TIME, e.g. 2:00 PM]</span></td>
+                </tr>
+                <tr>
+                    <td>Check-out Date &amp; Time</td>
+                    <td><span class="placeholder">[DATE]</span> at <span class="placeholder">[TIME, e.g. 11:00 AM]</span></td>
+                </tr>
+                <tr>
+                    <td>Total Duration</td>
+                    <td><span class="placeholder">[NUMBER]</span> nights</td>
+                </tr>
+            </table>
+
+            <p class="clause"><span class="clause-num">3.1</span> This license is strictly for the period stated above. Any extension must be mutually agreed in writing and may attract additional charges.</p>
+
+            <p class="clause"><span class="clause-num">3.2</span> Early check-in or late check-out is subject to availability and the Owner's prior written consent.</p>
+
+            <h2>4. License Fee and Payment</h2>
+
+            <table class="details">
+                <tr>
+                    <td>Nightly Rate</td>
+                    <td>INR <span class="placeholder">[AMOUNT]</span> /- per night (inclusive of taxes, if applicable)</td>
+                </tr>
+                <tr>
+                    <td>Total License Fee</td>
+                    <td>INR <span class="placeholder">[TOTAL AMOUNT]</span> /- (<span class="placeholder">[AMOUNT IN WORDS]</span>)</td>
+                </tr>
+                <tr>
+                    <td>Booking Platform Fee</td>
+                    <td><span class="placeholder">[IF VIA AIRBNB — state "As per Airbnb" / "N/A" if direct]</span></td>
+                </tr>
+                <tr>
+                    <td>Payment Method</td>
+                    <td><span class="placeholder">[UPI / Bank Transfer / Airbnb / Other]</span></td>
+                </tr>
+                <tr>
+                    <td>Payment Schedule</td>
+                    <td>Full payment due at least <span class="placeholder">[NUMBER]</span> days before check-in, or as per platform terms</td>
+                </tr>
+            </table>
+
+            <p class="clause"><span class="clause-num">4.1</span> GST, if applicable, shall be charged as per prevailing rates and is the responsibility of the Owner to remit.</p>
+        </div>
+
+        <div class="footer">
+            <span class="footer-brand">अमलायम्</span>
+            <span class="footer-info">Leave and License Agreement &middot; Confidential</span>
+        </div>
+        <span class="page-num">1</span>
+    </div>
+
+    <!-- ==================== PAGE 2 ==================== -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <span class="header-mark">अ</span>
+                <div class="header-divider"></div>
+                <div class="header-text">
+                    <span class="header-devanagari">अमलायम्</span>
+                    <span class="header-english">Amalaayam</span>
+                </div>
+            </div>
+            <div class="header-right">
+                B-3, Cloud Nine Cottages<br>
+                Jail Road, Dhumaspur, Badshahpur<br>
+                Gurgaon, Haryana 122101, India<br>
+                <a href="https://amalaayam.com">amalaayam.com</a> &middot; <span class="placeholder">[PHONE]</span>
+            </div>
+        </div>
+        <div class="accent-stripe"></div>
+
+        <div class="body">
+
+            <h2>5. Security Deposit</h2>
+
+            <table class="details">
+                <tr>
+                    <td>Deposit Amount</td>
+                    <td>INR <span class="placeholder">[AMOUNT]</span> /- (<span class="placeholder">[AMOUNT IN WORDS]</span>)</td>
+                </tr>
+                <tr>
+                    <td>Due Date</td>
+                    <td>At the time of booking confirmation, or upon check-in</td>
+                </tr>
+                <tr>
+                    <td>Refund</td>
+                    <td>Within 7 days of check-out, subject to deductions (if any)</td>
+                </tr>
+            </table>
+
+            <p class="clause"><span class="clause-num">5.1</span> The deposit is refundable and shall be returned after deducting any costs toward damage to property, missing inventory items, excessive cleaning, or breach of house rules.</p>
+
+            <p class="clause"><span class="clause-num">5.2</span> If the cost of damages exceeds the deposit amount, the Guest shall be liable to pay the difference within 7 days of receiving a written estimate from the Owner.</p>
+
+            <h2>6. Cancellation and Refund Policy</h2>
+
+            <p class="clause"><span class="clause-num">6.1</span> <strong>By the Guest:</strong></p>
+            <p class="sub-clause"><span class="sub-clause-marker">a)</span> Cancellation 15 or more days before check-in: full refund of the license fee (excluding non-refundable platform fees, if any).</p>
+            <p class="sub-clause"><span class="sub-clause-marker">b)</span> Cancellation 7–14 days before check-in: 50% refund of the license fee.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">c)</span> Cancellation less than 7 days before check-in: no refund.</p>
+
+            <p class="clause"><span class="clause-num">6.2</span> <strong>By the Owner:</strong> In the unlikely event the Owner must cancel, the Guest shall receive a full refund of all amounts paid. The Owner shall make best efforts to provide at least 7 days' notice and assist in finding alternative accommodation.</p>
+
+            <p class="clause"><span class="clause-num">6.3</span> If the booking was made through Airbnb or another platform, the platform's cancellation policy shall prevail in case of conflict with this clause.</p>
+
+            <h2>7. Number of Occupants</h2>
+
+            <p class="clause"><span class="clause-num">7.1</span> Maximum permitted occupants: <strong>18</strong> persons (including children).</p>
+
+            <p class="clause"><span class="clause-num">7.2</span> The Guest shall provide a list of all occupants with valid government-issued photo ID (Aadhaar, passport, or driving licence) at or before check-in.</p>
+
+            <p class="clause"><span class="clause-num">7.3</span> No additional persons may stay overnight without the Owner's prior written consent. Violation may result in immediate termination of this Agreement without refund.</p>
+
+            <h2>8. Permitted Use and House Rules</h2>
+
+            <p class="clause"><span class="clause-num">8.1</span> The property is licensed exclusively for short-term residential / holiday use. No commercial, illegal, or immoral activities are permitted.</p>
+
+            <p class="clause"><span class="clause-num">8.2</span> <strong>House Rules:</strong></p>
+            <p class="sub-clause"><span class="sub-clause-marker">a)</span> <strong>Quiet hours:</strong> 10:00 PM to 7:00 AM. The Guest shall not cause any nuisance or disturbance to neighbours.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">b)</span> <strong>No smoking</strong> inside the villa. Smoking is permitted only in designated outdoor areas.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">c)</span> <strong>Pets:</strong> Not permitted unless expressly agreed in writing.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">d)</span> <strong>Events and parties:</strong> No large gatherings, parties, or events without the Owner's prior written consent. Additional charges and a supplementary deposit may apply.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">e)</span> <strong>Swimming pool:</strong> Use at the Guest's own risk. Children must be supervised at all times. Pool hours: <span class="placeholder">[TIME]</span> to <span class="placeholder">[TIME]</span>.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">f)</span> <strong>Garbage:</strong> The Guest shall dispose of waste in the designated bins and follow any waste segregation instructions provided.</p>
+            <p class="sub-clause"><span class="sub-clause-marker">g)</span> <strong>Parking:</strong> <span class="placeholder">[NUMBER]</span> vehicle(s) permitted within the property premises.</p>
+
+            <p class="clause"><span class="clause-num">8.3</span> The Guest shall not make any alterations, additions, or modifications to the property, its fixtures, or furnishings.</p>
+
+            <p class="clause"><span class="clause-num">8.4</span> The Guest shall not sublet, assign, or transfer this license or any part thereof to any third party.</p>
+
+        </div>
+
+        <div class="footer">
+            <span class="footer-brand">अमलायम्</span>
+            <span class="footer-info">Leave and License Agreement &middot; Confidential</span>
+        </div>
+        <span class="page-num">2</span>
+    </div>
+
+    <!-- ==================== PAGE 3 ==================== -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <span class="header-mark">अ</span>
+                <div class="header-divider"></div>
+                <div class="header-text">
+                    <span class="header-devanagari">अमलायम्</span>
+                    <span class="header-english">Amalaayam</span>
+                </div>
+            </div>
+            <div class="header-right">
+                B-3, Cloud Nine Cottages<br>
+                Jail Road, Dhumaspur, Badshahpur<br>
+                Gurgaon, Haryana 122101, India<br>
+                <a href="https://amalaayam.com">amalaayam.com</a> &middot; <span class="placeholder">[PHONE]</span>
+            </div>
+        </div>
+        <div class="accent-stripe"></div>
+
+        <div class="body">
+
+            <h2>9. Maintenance and Damages</h2>
+
+            <p class="clause"><span class="clause-num">9.1</span> The Guest shall use the property and all furnished items with reasonable care and maintain them in the same condition as received, subject to normal wear and tear.</p>
+
+            <p class="clause"><span class="clause-num">9.2</span> Any damage, breakage, or loss of property, furnishings, appliances, or fixtures caused by the Guest or any occupant shall be reported to the Owner immediately and the Guest shall be liable for the cost of repair or replacement at current market value.</p>
+
+            <p class="clause"><span class="clause-num">9.3</span> The Owner shall be responsible for normal maintenance and pre-existing defects. The Guest shall promptly report any pre-existing damage or malfunction upon check-in.</p>
+
+            <h2>10. Utilities and Services</h2>
+
+            <p class="clause"><span class="clause-num">10.1</span> Electricity, water, gas, Wi-Fi, and standard housekeeping are included in the license fee unless stated otherwise.</p>
+
+            <p class="clause"><span class="clause-num">10.2</span> Any additional services (private chef, extra housekeeping, laundry, airport transfers) shall be arranged upon request and charged separately as agreed.</p>
+
+            <p class="clause"><span class="clause-num">10.3</span> The Owner shall not be liable for temporary interruptions to electricity, water, internet, or other utilities caused by factors beyond the Owner's control (including but not limited to power cuts, municipal supply disruptions, or natural events).</p>
+
+            <h2>11. Safety, Liability, and Indemnity</h2>
+
+            <p class="clause"><span class="clause-num">11.1</span> The Guest acknowledges that the property includes a swimming pool and outdoor areas, and agrees to use all facilities at their own risk.</p>
+
+            <p class="clause"><span class="clause-num">11.2</span> The Owner shall not be liable for any personal injury, illness, death, loss, or damage to the Guest's belongings during the stay, except where caused by the Owner's proven negligence.</p>
+
+            <p class="clause"><span class="clause-num">11.3</span> The Guest shall indemnify the Owner against any claims, losses, or liabilities arising from the Guest's use of the property, acts or omissions of the Guest or any occupant, or any breach of this Agreement.</p>
+
+            <p class="clause"><span class="clause-num">11.4</span> The Owner recommends that the Guest obtain travel/holiday insurance covering personal accident, medical, and baggage loss for the duration of the stay.</p>
+
+            <h2>12. Right of Entry</h2>
+
+            <p class="clause"><span class="clause-num">12.1</span> The Owner or the Owner's authorised representative may enter the premises with reasonable notice for maintenance, emergencies, or to ensure compliance with this Agreement.</p>
+
+            <p class="clause"><span class="clause-num">12.2</span> In the case of an emergency (fire, flood, gas leak, security threat), the Owner may enter without prior notice.</p>
+
+            <h2>13. Termination</h2>
+
+            <p class="clause"><span class="clause-num">13.1</span> The Owner reserves the right to terminate this Agreement immediately and require the Guest to vacate if:</p>
+            <p class="sub-clause"><span class="sub-clause-marker">a)</span> The Guest breaches any material term of this Agreement;</p>
+            <p class="sub-clause"><span class="sub-clause-marker">b)</span> The Guest engages in illegal, anti-social, or nuisance activities;</p>
+            <p class="sub-clause"><span class="sub-clause-marker">c)</span> The number of occupants exceeds the permitted limit without consent;</p>
+            <p class="sub-clause"><span class="sub-clause-marker">d)</span> The Guest causes or threatens to cause damage to the property.</p>
+
+            <p class="clause"><span class="clause-num">13.2</span> In the event of termination under Clause 13.1, no refund of the license fee shall be payable.</p>
+
+            <h2>14. Check-out Obligations</h2>
+
+            <p class="clause"><span class="clause-num">14.1</span> The Guest shall vacate the property by the agreed check-out time, returning all keys, remotes, and access devices.</p>
+
+            <p class="clause"><span class="clause-num">14.2</span> The property shall be left in a reasonably clean and orderly condition. Excessive cleaning required beyond normal standards may be charged against the security deposit.</p>
+
+            <p class="clause"><span class="clause-num">14.3</span> The Owner or the Owner's representative shall conduct an inventory check at check-out. Both parties are encouraged to be present.</p>
+
+        </div>
+
+        <div class="footer">
+            <span class="footer-brand">अमलायम्</span>
+            <span class="footer-info">Leave and License Agreement &middot; Confidential</span>
+        </div>
+        <span class="page-num">3</span>
+    </div>
+
+    <!-- ==================== PAGE 4 ==================== -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <span class="header-mark">अ</span>
+                <div class="header-divider"></div>
+                <div class="header-text">
+                    <span class="header-devanagari">अमलायम्</span>
+                    <span class="header-english">Amalaayam</span>
+                </div>
+            </div>
+            <div class="header-right">
+                B-3, Cloud Nine Cottages<br>
+                Jail Road, Dhumaspur, Badshahpur<br>
+                Gurgaon, Haryana 122101, India<br>
+                <a href="https://amalaayam.com">amalaayam.com</a> &middot; <span class="placeholder">[PHONE]</span>
+            </div>
+        </div>
+        <div class="accent-stripe"></div>
+
+        <div class="body">
+
+            <h2>15. Police Verification and Compliance</h2>
+
+            <p class="clause"><span class="clause-num">15.1</span> In compliance with local police regulations and the Haryana Registration of Guests (Hotels, Clubs, etc.) Rules, the Owner may require copies of government-issued photo ID of all occupants and submit the same to local authorities.</p>
+
+            <p class="clause"><span class="clause-num">15.2</span> For foreign nationals, a copy of the passport, visa, and FRRO registration (if applicable) shall be provided at check-in.</p>
+
+            <p class="clause"><span class="clause-num">15.3</span> The Guest consents to the Owner sharing occupant details with local authorities as may be required by law.</p>
+
+            <h2>16. Stamp Duty and Registration</h2>
+
+            <p class="clause"><span class="clause-num">16.1</span> As this is a short-term Leave and License arrangement (not exceeding 11 months), registration under the Registration Act, 1908 is not mandatory. However, stamp duty, if applicable under Haryana state rules, shall be borne by <span class="placeholder">[OWNER / GUEST / SHARED — specify]</span>.</p>
+
+            <h2>17. Dispute Resolution</h2>
+
+            <p class="clause"><span class="clause-num">17.1</span> Any dispute arising out of or in connection with this Agreement shall first be resolved through good-faith negotiation between the parties.</p>
+
+            <p class="clause"><span class="clause-num">17.2</span> If unresolved within 30 days, the dispute shall be referred to a sole arbitrator appointed mutually, and the arbitration shall be conducted in accordance with the Arbitration and Conciliation Act, 1996, with the seat in Gurgaon, Haryana.</p>
+
+            <p class="clause"><span class="clause-num">17.3</span> The courts at Gurgaon, Haryana shall have exclusive jurisdiction.</p>
+
+            <h2>18. General Provisions</h2>
+
+            <p class="clause"><span class="clause-num">18.1</span> <strong>Entire Agreement:</strong> This Agreement constitutes the entire understanding between the parties and supersedes all prior negotiations, representations, or agreements relating to this subject matter.</p>
+
+            <p class="clause"><span class="clause-num">18.2</span> <strong>Amendments:</strong> Any modification to this Agreement must be in writing and signed by both parties.</p>
+
+            <p class="clause"><span class="clause-num">18.3</span> <strong>Severability:</strong> If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall continue in full force.</p>
+
+            <p class="clause"><span class="clause-num">18.4</span> <strong>Governing Law:</strong> This Agreement shall be governed by and construed in accordance with the laws of India and the State of Haryana.</p>
+
+            <p class="clause"><span class="clause-num">18.5</span> <strong>Force Majeure:</strong> Neither party shall be liable for failure to perform obligations due to events beyond their reasonable control, including natural disasters, pandemics, government orders, or civil unrest.</p>
+
+            <p class="clause"><span class="clause-num">18.6</span> <strong>Notices:</strong> All notices under this Agreement shall be in writing and may be delivered by hand, courier, email, or WhatsApp to the contact details provided by each party.</p>
+
+            <p style="margin-top: 28px;">
+                <strong>IN WITNESS WHEREOF,</strong> the parties have read, understood, and agreed to the terms and conditions set forth herein, and have signed this Agreement on the date first written above.
+            </p>
+
+            <!-- Signature Block -->
+            <div class="sig-block">
+                <div class="sig-party">
+                    <h4>Licensor (Owner)</h4>
+                    <div class="sig-line">
+                        <span class="sig-label">Signature</span>
+                    </div>
+                    <div class="sig-line">
+                        <span class="sig-label">Name</span>
+                        <span class="sig-value"><span class="placeholder">[OWNER FULL NAME]</span></span>
+                    </div>
+                    <div class="sig-line">
+                        <span class="sig-label">Date</span>
+                        <span class="sig-value"><span class="placeholder">[DATE]</span></span>
+                    </div>
+                </div>
+                <div class="sig-party">
+                    <h4>Licensee (Guest)</h4>
+                    <div class="sig-line">
+                        <span class="sig-label">Signature</span>
+                    </div>
+                    <div class="sig-line">
+                        <span class="sig-label">Name</span>
+                        <span class="sig-value"><span class="placeholder">[GUEST FULL NAME]</span></span>
+                    </div>
+                    <div class="sig-line">
+                        <span class="sig-label">Date</span>
+                        <span class="sig-value"><span class="placeholder">[DATE]</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Witnesses -->
+            <div class="witness-block">
+                <h4>Witnesses</h4>
+                <div class="witness-row">
+                    <div class="witness-entry">
+                        <div class="sig-line">
+                            <span class="sig-label">Signature</span>
+                        </div>
+                        <div class="sig-line">
+                            <span class="sig-label">Name</span>
+                            <span class="sig-value"><span class="placeholder">[WITNESS 1 NAME]</span></span>
+                        </div>
+                        <div class="sig-line">
+                            <span class="sig-label">Address</span>
+                            <span class="sig-value"><span class="placeholder">[ADDRESS]</span></span>
+                        </div>
+                    </div>
+                    <div class="witness-entry">
+                        <div class="sig-line">
+                            <span class="sig-label">Signature</span>
+                        </div>
+                        <div class="sig-line">
+                            <span class="sig-label">Name</span>
+                            <span class="sig-value"><span class="placeholder">[WITNESS 2 NAME]</span></span>
+                        </div>
+                        <div class="sig-line">
+                            <span class="sig-label">Address</span>
+                            <span class="sig-value"><span class="placeholder">[ADDRESS]</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <span class="footer-brand">अमलायम्</span>
+            <span class="footer-info">Leave and License Agreement &middot; Confidential</span>
+        </div>
+        <span class="page-num">4</span>
+    </div>
+
+    <!-- ==================== PAGE 5 — ANNEXURE A ==================== -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <span class="header-mark">अ</span>
+                <div class="header-divider"></div>
+                <div class="header-text">
+                    <span class="header-devanagari">अमलायम्</span>
+                    <span class="header-english">Amalaayam</span>
+                </div>
+            </div>
+            <div class="header-right">
+                B-3, Cloud Nine Cottages<br>
+                Jail Road, Dhumaspur, Badshahpur<br>
+                Gurgaon, Haryana 122101, India<br>
+                <a href="https://amalaayam.com">amalaayam.com</a> &middot; <span class="placeholder">[PHONE]</span>
+            </div>
+        </div>
+        <div class="accent-stripe"></div>
+
+        <div class="body">
+            <div class="doc-title">Annexure A</div>
+            <div class="doc-subtitle">Inventory and Condition Report</div>
+
+            <p>This inventory is to be verified jointly by the Owner and Guest at check-in and check-out. Any discrepancies should be noted in the "Remarks" column.</p>
+
+            <h3>Living Room</h3>
+            <table class="inventory-table">
+                <thead>
+                    <tr><th>Item</th><th>Qty</th><th>Condition at Check-in</th><th>Condition at Check-out</th><th>Remarks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sofa set</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Coffee table</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Television</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>AC unit(s)</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Curtains / blinds</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Decorative items</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <h3>Kitchen</h3>
+            <table class="inventory-table">
+                <thead>
+                    <tr><th>Item</th><th>Qty</th><th>Condition at Check-in</th><th>Condition at Check-out</th><th>Remarks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Refrigerator</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Microwave</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Gas stove / hob</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Crockery set</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Cutlery set</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Cooking utensils</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Water purifier</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <h3>Bedrooms</h3>
+            <table class="inventory-table">
+                <thead>
+                    <tr><th>Item</th><th>Qty</th><th>Condition at Check-in</th><th>Condition at Check-out</th><th>Remarks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Bed(s) with mattress</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Bedside tables</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Wardrobe / closet</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>AC unit(s)</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Bed linen sets</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Towel sets</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Mirror / dresser</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <h3>Bathrooms</h3>
+            <table class="inventory-table">
+                <thead>
+                    <tr><th>Item</th><th>Qty</th><th>Condition at Check-in</th><th>Condition at Check-out</th><th>Remarks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Geyser / water heater</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Shower / fixtures</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Towel rack</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Toiletries holder</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <h3>Pool &amp; Outdoor</h3>
+            <table class="inventory-table">
+                <thead>
+                    <tr><th>Item</th><th>Qty</th><th>Condition at Check-in</th><th>Condition at Check-out</th><th>Remarks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Pool loungers</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Outdoor furniture</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>BBQ / grill</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Garden lights</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <h3>General / Other</h3>
+            <table class="inventory-table">
+                <thead>
+                    <tr><th>Item</th><th>Qty</th><th>Condition at Check-in</th><th>Condition at Check-out</th><th>Remarks</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Keys / access cards</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Remote controls</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Iron / ironing board</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Washing machine</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Vacuum cleaner</td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <div class="sig-block" style="margin-top: 36px;">
+                <div class="sig-party">
+                    <h4>Owner / Representative</h4>
+                    <div class="sig-line"><span class="sig-label">Signature &amp; Date</span></div>
+                </div>
+                <div class="sig-party">
+                    <h4>Guest</h4>
+                    <div class="sig-line"><span class="sig-label">Signature &amp; Date</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="footer-brand">अमलायम्</span>
+            <span class="footer-info">Annexure A — Inventory and Condition Report &middot; Confidential</span>
+        </div>
+        <span class="page-num">5</span>
+    </div>
+
+</body>
+</html>
